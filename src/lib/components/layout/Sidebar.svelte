@@ -1,5 +1,6 @@
 <script lang="ts">
   import { page } from "$app/stores";
+  import { base } from "$app/paths";
   import { 
     LayoutDashboard, 
     TrendingUp, 
@@ -12,16 +13,16 @@
   } from "lucide-svelte";
 
   const navItems = [
-    { name: "Overview", href: "/", icon: LayoutDashboard },
-    { name: "Sales Performance", href: "/sales", icon: TrendingUp },
-    { name: "Marketing Analytics", href: "/marketing", icon: Users },
-    { name: "Operations Metrics", href: "/operations", icon: BarChart3 },
-    { name: "Report Builder", href: "/builder", icon: FileEdit },
+    { name: "Overview", href: `${base}/`, icon: LayoutDashboard },
+    { name: "Sales Performance", href: `${base}/sales`, icon: TrendingUp },
+    { name: "Marketing Analytics", href: `${base}/marketing`, icon: Users },
+    { name: "Operations Metrics", href: `${base}/operations`, icon: BarChart3 },
+    { name: "Report Builder", href: `${base}/builder`, icon: FileEdit },
   ];
 
   const secondaryNavItems = [
-    { name: "Settings", href: "/settings", icon: Settings },
-    { name: "Support", href: "/support", icon: HelpCircle },
+    { name: "Settings", href: `${base}/settings`, icon: Settings },
+    { name: "Support", href: `${base}/support`, icon: HelpCircle },
   ];
 
   const techStack = [
