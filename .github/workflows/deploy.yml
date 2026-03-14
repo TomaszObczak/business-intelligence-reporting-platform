@@ -37,10 +37,6 @@ jobs:
   deploy:
     needs: build_site
     runs-on: ubuntu-latest
-    # To środowisko musi zezwalać na wdrożenia z gałęzi 'main'
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Deploy
         id: deployment
